@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="pl.coffee.web.MainController" 
+      prefHeight="700.0" prefWidth="1000.0">
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="5.0" style="-fx-padding: 5;">
+            <TextField fx:id="urlField" onAction="#loadUrlFromField" HBox.hgrow="ALWAYS" />
+            
+            <Button text="Odswiez" onAction="#rebtac"/>
+
+            <Button text="Wstecz" onAction="#wsbtac"/>
+            <Button text="Przod" onAction="#fwbtac"/>
+
+            <Button text="+" onAction="#zoomin"/>
+
+            <Button text="-" onAction="#zoomout"/>
+            <Button text="Szukaj" onAction="#loadUrlFromField" />
+            <Button text="Strona Glowna" onAction="#homepagebt" />
+        </HBox>
+        
+        <WebView fx:id="webView" VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>
